@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of https://www.cleanliquor.com/.well-known/*
+host: https://www.cleanliquor.com
+note: >-
+  cleanliquor.com is a Shopify-hosted direct-to-consumer storefront for the
+  CleanCo beverage brand. The openid-configuration / oauth-authorization-server
+  documents below are Shopify's storefront customer-account OIDC (issuer
+  https://shopify.com/authentication/26795606113), not a CleanCo-operated
+  developer API. CleanCo publishes no first-party API.
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: cleanco-openid-configuration.json
+  note: Shopify storefront customer-account OIDC discovery
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: cleanco-oauth-authorization-server.json
+  note: Shopify storefront customer-account OAuth authorization-server metadata (RFC 8414)
+- path: /.well-known/security.txt
+  status: 301
+  redirect: https://clean.co/.well-known/security.txt
+  note: redirects off-host to clean.co, which returns 404 (no security.txt published)
+- path: /.well-known/api-catalog
+  status: 301
+- path: /.well-known/ai-plugin.json
+  status: 301
