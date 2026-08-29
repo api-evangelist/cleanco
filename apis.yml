@@ -13,6 +13,9 @@ description: >-
   any machine-readable API surface; it is retained in the API Evangelist network
   only as an identified Lightspeed portfolio company, not as an API provider.
 url: https://raw.githubusercontent.com/api-evangelist/cleanco/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "It is a consumer packaged-goods brand and does not publish a developer API, developer portal, or any machine-readable API surface; it is retained in the API Evangelist network only as an identified Li"
 deliveryModel:
   model: unknown
   open_source: false
